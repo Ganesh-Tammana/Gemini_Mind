@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useContext } from 'react';
-import { ArrowUp, User, Sun, Moon,AlignJustify } from 'lucide-react';
+import { ArrowUp, User, Sun, Moon,AlignJustify , LoaderPinwheel} from 'lucide-react';
 import { GeminiApi} from '../API/GeminiApi';
 import { DNA,Triangle } from 'react-loader-spinner';
 import Bot from '../assets/Bot.svg';
@@ -73,7 +73,7 @@ export default function RightSection() {
                 <span className={`h-6 w-6 lg:h-8 lg:w-8 flex justify-center items-center rounded-full border-2 ${theme === 'light' ? 'border-white' : 'border-slate-700'}`}>
                     <User />
                 </span>
-                <span>GEMINI_MIND</span>
+                <span className='flex gap-1 justify-center items-center'><  LoaderPinwheel color='red' size="20"/> GEMINI_MIND </span>
                 <span>
                     <button onClick={toggleTheme}>
                         {theme === 'light' ? <Sun /> : <Moon />}
